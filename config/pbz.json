@@ -1,0 +1,9 @@
+{
+  "schemaVersion": 1,
+  "game": "Phantom Blade Zero",
+  "engineVersion": "Unreal Engine 5.7",
+  "gameBuild": "5.7.4-301524",
+  "aesKey": "0x4BC8A51E5381325073F2BC7D4E3089CD557C4E9B7D453901C2C795518867E01D",
+  "mappings": "mappings/ProjectPBZ-5.7.4-301524-full.usmap",
+  "mappingSha256": "C7FB911BC24EC7A3C77FBF1CBE62C57BEC1DCC8B621EA305AC9E50B4D9FB6651"
+}

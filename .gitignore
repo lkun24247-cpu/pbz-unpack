@@ -1,0 +1,46 @@
+# Local SDKs and published binaries
+.tools/
+.build/
+
+# Extracted assets and test output
+output/
+exports/
+*.blend
+*.blend1
+*.fbx
+*.glb
+*.gltf
+*.pak
+*.psa
+*.psk
+*.ucas
+*.utoc
+
+# Build artifacts
+bin/
+obj/
+*.dll
+*.exe
+*.pdb
+
+# Caches and local settings
+__pycache__/
+*.py[cod]
+.vs/
+.vscode/
+.idea/
+*.user
+*.suo
+
+# GitHub and other credentials must stay outside this public repository
+.env
+.env.*
+*.pem
+*.key
+secrets.json
+credentials.json
+
+# OS noise
+.DS_Store
+Thumbs.db
+Desktop.ini

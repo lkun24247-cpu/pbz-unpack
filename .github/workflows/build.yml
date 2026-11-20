@@ -1,0 +1,32 @@
+name: build
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: 10.0.x
+      - name: Publish CLI
+        shell: pwsh
+        run: ./scripts/install.ps1
+      - name: CLI help smoke test
+        shell: pwsh
+        run: ./scripts/pbz.ps1 --help
+      - name: Validate bundled profile
+        shell: pwsh
+        run: |
+          $profile = Get-Content ./config/pbz.json -Raw | ConvertFrom-Json
+          if ($profile.aesKey -notmatch '^0x[0-9A-Fa-f]{64}$') { throw 'Invalid AES key format' }
+          $hash = (Get-FileHash $profile.mappings -Algorithm SHA256).Hash
+          if ($hash -ne $profile.mappingSha256) { throw 'Mapping hash mismatch' }

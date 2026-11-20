@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <AssemblyName>PbzUnpack.Cli</AssemblyName>
+    <RootNamespace>PbzUnpack.Cli</RootNamespace>
+    <Version>1.0.0</Version>
+    <Description>Phantom Blade Zero UE5.7 asset inspection and export CLI</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="CUE4Parse" Version="1.2.2.202611" />
+    <PackageReference Include="CUE4Parse-Conversion" Version="1.2.2.202611" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.4" />
+  </ItemGroup>
+</Project>

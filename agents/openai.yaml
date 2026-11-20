@@ -1,0 +1,4 @@
+interface:
+  display_name: "PBZ Unpack"
+  short_description: "Inspect and export Phantom Blade Zero game assets"
+  default_prompt: "Use $pbz-unpack to find and export an asset from my local Phantom Blade Zero installation."
